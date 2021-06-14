@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">LocationAwareness</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="getting_location">Getting Location...</string>
+    <string name="finish_location">Finish Getting Location</string>
+    <string name="send">Send</string>
 </resources>
