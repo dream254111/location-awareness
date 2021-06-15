@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
         if (!checkPermission(Manifest.permission.ACCESS_COARSE_LOCATION))
             ActivityCompat.requestPermissions(this, new String[] { Manifest.permission.ACCESS_COARSE_LOCATION }, 1);
 
+        sendButton.setEnabled(false);
         locationText.setText(R.string.getting_location);
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
         latitude = location.getLatitude();
         longitude = location.getLongitude();
 
+        sendButton.setEnabled(true);
         locationText.setText(R.string.finish_location);
     }
 
